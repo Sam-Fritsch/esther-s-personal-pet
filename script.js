@@ -26,7 +26,8 @@ async function loadDailyMessage() {
 
 loadDailyMessage();
 
-
+const response = await fetch('/api/getMessages'); 
+console.log(response);
 
 
 panda.addEventListener('click', () => {
