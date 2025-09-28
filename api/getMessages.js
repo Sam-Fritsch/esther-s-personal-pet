@@ -5,7 +5,7 @@ export default async function handler(req, res) {
     const keys = {
       type: 'service_account',
       project_id: process.env.CLIENT_ID,
-      private_key: process.env.GOOGLE_PRIVATE_KEY.replace(/\\n/g, '\n'),
+      private_key: process.env.CLIENT_SECRET.replace(/\\n/g, '\n'),
       client_email: process.env.CLIENT_EMAIL
     };
 
