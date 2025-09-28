@@ -2,7 +2,7 @@ const panda = document.querySelector('.panda');
 const wrapper = document.querySelector('.panda-wrapper');
 
 let url = 'https://api.sheety.co/503cd683d77f4feeb101a928a19c01b6/messageBank/sheet1';
-let dailyMessage = "Sam is very sorry for hurting you.. please accept this virtual pet who will deliver friendly and loving messages to you throughout the week."; // Default fallback
+let dailyMessage = "Somebody loves ya"; // Default fallback
 
 async function loadDailyMessage() {
   try {
@@ -16,7 +16,7 @@ async function loadDailyMessage() {
       return msgDate.toDateString() === today.toDateString();
     });
     
-    dailyMessage = todaysMessageObj ? todaysMessageObj.message : "Sam is very sorry for hurting you.. please accept this virtual pet who will deliver friendly and loving messages to you throughout the week.";
+    dailyMessage = todaysMessageObj ? todaysMessageObj.message : "Somebody loves ya";
     return dailyMessage;
   } catch (error) {
     console.error("Error fetching messages:", error);
