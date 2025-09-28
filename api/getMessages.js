@@ -5,7 +5,8 @@ export default async function handler(req, res) {
     const keys = {
       type: 'service_account',
       project_id: process.env.CLIENT_ID,
-      private_key: process.env.CLIENT_SECRET
+      private_key: process.env.CLIENT_SECRET,
+      client_email: process.env.CLIENT_EMAIL
     };
 
     const auth = new google.auth.GoogleAuth({
