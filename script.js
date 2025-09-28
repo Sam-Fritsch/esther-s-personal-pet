@@ -75,12 +75,12 @@ loveBar.classList.add('love-bar');
 wrapper.appendChild(loveBar);
 
 const barFrames = [
-  './heart-bar-1.png',
-  './heart-bar-2.png',
-  './heart-bar-3.png',
-  './heart-bar-4.png',
-  './heart-bar-5.png',
-  './heart-bar-6.png'
+  './heart-bar-1.png.png',
+  './heart-bar-2.png.png',
+  './heart-bar-3.png.png',
+  './heart-bar-4.png.png',
+  './heart-bar-5.png.png',
+  './heart-bar-6.png.png'
 ];
 
 let currentFrame = 0;
