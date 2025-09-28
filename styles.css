@@ -1,0 +1,112 @@
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+  background: #fce4ec;
+  font-family: Arial, sans-serif;
+}
+
+.container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  gap: 20px;
+  text-align: center;
+}
+
+
+h1 {
+font-size: 3rem;
+font-family: "Pixelify Sans", sans-serif;
+margin: 0;
+}
+
+h2 {
+
+font-family: "Pixelify Sans", sans-serif;
+margin: 0;
+}
+
+.panda-wrapper {
+  position: relative; 
+  display: inline-block;
+}
+
+
+.panda {
+width: min(70vmin, 700px);  
+height: min(70vmin, 700px); 
+background: url('./happy-panda-sprite.png');
+background-size: 400% auto; 
+animation: walk 1s steps(4) infinite;
+cursor: pointer;
+image-rendering: pixelated; 
+}
+
+
+@keyframes walk {
+from { background-position: 0 0; }
+to   { background-position: -400% 0; } 
+}
+
+.heart {
+  position: absolute;
+  width: 128px;  
+  height: 128px;
+  left: 48%;
+  bottom: 75%;
+  transform: translateX(-50%);
+  pointer-events: none;
+  image-rendering: pixelated;
+
+  background: url('./heart-beat-sprite.png') no-repeat;
+  background-size: 200% 100%;  /* 2 frames horizontally */
+  animation: heartPop 0.4s steps(2) infinite; 
+}
+
+@keyframes heartPop {
+  from { background-position: 0 0; }
+  to   { background-position: 200% 0; } 
+}
+
+
+
+
+.dialog {
+  position: absolute;
+  bottom: 5%; /* above panda */
+  left: 48%;
+  transform: translateX(-50%);
+  padding: 16px 24px;    
+  min-width: 220px;      
+  max-width: 400px;        
+  max-height: 400px; 
+  background: #fff;
+  border: 4px solid #000; /* pixel-y black border */
+  font-family: "Pixelify Sans", sans-serif;
+  font-size: 12px; /* adjust to taste */
+  color: #000;
+  text-align: center;
+  white-space: nowrap;
+  image-rendering: pixelated;
+
+  /* Optional: pixel “boxy” look */
+  box-shadow: 0 0 0 2px #000 inset;
+}
+
+
+.love-bar {
+  position: absolute;
+  width: 128px;  
+  height: 128px; 
+  left: 8%;
+  bottom: 75%;
+  transform: translateX(-50%);
+  pointer-events: none;
+  image-rendering: pixelated;
+
+}
