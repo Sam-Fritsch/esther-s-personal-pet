@@ -7,6 +7,13 @@ body, html {
   font-family: Arial, sans-serif;
 }
 
+
+.scale-wrapper {
+  display: flex;
+  justify-content: center;
+  padding-top: 10vh;
+}
+
 .container {
   position: relative;
   display: flex;
@@ -17,7 +24,7 @@ body, html {
   gap: 20px;
   text-align: center;
   transform: scale(1.3); 
-  transform-origin: center top;
+  transform-origin: top center;
 }
 
 
