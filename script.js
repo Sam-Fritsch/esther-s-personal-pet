@@ -2,7 +2,7 @@ const panda = document.querySelector('.panda');
 const wrapper = document.querySelector('.panda-wrapper');
 
 let url = 'https://api.sheety.co/503cd683d77f4feeb101a928a19c01b6/messageBank/sheet1';
-let dailyMessage = "Great job getting your deal back! Personal Panda encourages you to continue finding wins throughout the week."; // Default fallback
+let dailyMessage = "I had an amazing dream of us chasing Leo in my yard. Little moments together like that excite me, it's the small moments together that make life meaningful with a partner :)"; // Default fallback
 
 async function loadDailyMessage() {
   try {
