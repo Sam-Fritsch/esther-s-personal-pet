@@ -26,17 +26,17 @@ async function loadDailyMessage() {
 
 loadDailyMessage();
 
-async function fetchMessages() {
-  try {
-    const response = await fetch('/api/getMessages');
-    const data = await response.json();
-    console.log('Messages from server:', data);
-  } catch (error) {
-    console.error(error);
-  }
-}
+// async function fetchMessages() {
+//   try {
+//     const response = await fetch('/api/getMessages');
+//     const data = await response.json();
+//     console.log('Messages from server:', data);
+//   } catch (error) {
+//     console.error(error);
+//   }
+// }
 
-fetchMessages();
+// fetchMessages();
 
 
 panda.addEventListener('click', () => {
