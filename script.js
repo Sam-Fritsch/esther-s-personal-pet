@@ -16,7 +16,7 @@ async function loadDailyMessage() {
       return msgDate.toDateString() === today.toDateString();
     });
     
-    dailyMessage = todaysMessageObj ? todaysMessageObj.message : "hello";
+    dailyMessage = todaysMessageObj ? todaysMessageObj.message : "Panda says oink oink";
     return dailyMessage;
   } catch (error) {
     console.error("Error fetching messages:", error);
