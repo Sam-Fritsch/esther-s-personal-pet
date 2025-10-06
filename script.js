@@ -2,7 +2,7 @@ const panda = document.querySelector('.panda');
 const wrapper = document.querySelector('.panda-wrapper');
 
 let url = 'https://api.sheety.co/503cd683d77f4feeb101a928a19c01b6/messageBank/sheet1';
-let dailyMessage = "Panda goes moo"; // Default fallback
+let dailyMessage = "I enjoyed spending time in St Paul together, walking through bakeries, its the kind of exploration we normally get in new cities/travelling. I enjoyed spending that beautiful day the way we did."; // Default fallback
 
 async function loadDailyMessage() {
   try {
