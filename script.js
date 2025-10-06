@@ -16,7 +16,7 @@ async function loadDailyMessage() {
       return msgDate.toDateString() === today.toDateString();
     });
     
-    dailyMessage = todaysMessageObj ? todaysMessageObj.message : "Panda goes moo";
+    dailyMessage = todaysMessageObj ? todaysMessageObj.message : "I enjoyed spending time in St Paul together, walking through bakeries, its the kind of exploration we normally get in new cities/travelling. I enjoyed spending that beautiful day the way we did.";
     return dailyMessage;
   } catch (error) {
     console.error("Error fetching messages:", error);
