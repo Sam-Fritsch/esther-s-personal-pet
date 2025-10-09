@@ -2,7 +2,7 @@ const panda = document.querySelector('.panda');
 const wrapper = document.querySelector('.panda-wrapper');
 
 let url = 'https://api.sheety.co/503cd683d77f4feeb101a928a19c01b6/messageBank/sheet1';
-let dailyMessage = "I miss your smile and your big cheeks :) You are a very hard worker, here's a fund for your coffee today."; // Default fallback
+let dailyMessage = "Last day in office for you! I'm glad we have so much planned out, we will be together a ton the rest of the year. It honestly feels a bit weird to leave, uncomfortable even... like are we ready. And yet deep down I know its right for us, we will open new doors."; // Default fallback
 
 async function loadDailyMessage() {
   try {
@@ -16,7 +16,7 @@ async function loadDailyMessage() {
       return msgDate.toDateString() === today.toDateString();
     });
     
-    dailyMessage = todaysMessageObj ? todaysMessageObj.message : "I miss your smile and your big cheeks :) You are a very hard worker, here's a fund for your coffee today.";
+    dailyMessage = todaysMessageObj ? todaysMessageObj.message : "Last day in office for you! I'm glad we have so much planned out, we will be together a ton the rest of the year. It honestly feels a bit weird to leave, uncomfortable even... like are we ready. And yet deep down I know its right for us, we will open new doors.";
     return dailyMessage;
   } catch (error) {
     console.error("Error fetching messages:", error);
