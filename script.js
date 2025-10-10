@@ -2,7 +2,7 @@ const panda = document.querySelector('.panda');
 const wrapper = document.querySelector('.panda-wrapper');
 
 let url = 'https://api.sheety.co/503cd683d77f4feeb101a928a19c01b6/messageBank/sheet1';
-let dailyMessage = "Panda says that Esther is a cute little baby and she deserves the world"; // Default fallback
+let dailyMessage = "Personal Panda thinks that Esther has a beautiful soul... and a beautiful big face. I want to squeeze it"; // Default fallback
 
 async function loadDailyMessage() {
   try {
@@ -16,7 +16,7 @@ async function loadDailyMessage() {
       return msgDate.toDateString() === today.toDateString();
     });
     
-    dailyMessage = todaysMessageObj ? todaysMessageObj.message : "";
+    dailyMessage = todaysMessageObj ? todaysMessageObj.message : "Personal Panda thinks that Esther has a beautiful soul... and a beautiful big face. I want to squeeze it";
     return dailyMessage;
   } catch (error) {
     console.error("Error fetching messages:", error);
