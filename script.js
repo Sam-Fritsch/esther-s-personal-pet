@@ -1,4 +1,4 @@
-const panda = document.querySelector('.panda');
+const pet = document.querySelector('.pet');
 const wrapper = document.querySelector('.panda-wrapper');
 
 let url = 'https://api.sheety.co/503cd683d77f4feeb101a928a19c01b6/messageBank/sheet1';
@@ -39,7 +39,7 @@ loadDailyMessage();
 // fetchMessages();
 
 
-panda.addEventListener('click', () => {
+pet.addEventListener('click', () => {
   const existingHeart = wrapper.querySelector('.heart');
   if (existingHeart) {
     existingHeart.remove();
@@ -47,7 +47,7 @@ panda.addEventListener('click', () => {
   const heart = document.createElement('div');
   heart.classList.add('heart');
   wrapper.appendChild(heart);
-  console.log(panda, wrapper);
+  console.log(pet, wrapper);
 
 
 

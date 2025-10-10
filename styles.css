@@ -46,7 +46,7 @@ margin: 0;
 }
 
 
-.panda {
+.pet {
   width: min(70vmin, 700px);  
   height: min(70vmin, 700px); 
   background: url('./pets/happy-panda-sprite.png');
