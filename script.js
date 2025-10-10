@@ -1,5 +1,5 @@
 const pet = document.querySelector('.pet');
-const wrapper = document.querySelector('.panda-wrapper');
+const wrapper = document.querySelector('.pet-wrapper');
 
 let url = 'https://api.sheety.co/503cd683d77f4feeb101a928a19c01b6/messageBank/sheet1';
 let dailyMessage = "Personal Panda thinks that Esther has a beautiful soul... and a beautiful big face. I want to squeeze it"; // Default fallback
