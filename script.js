@@ -64,10 +64,6 @@ pet.addEventListener('click', () => {
   }
 
 
-  // Remove heart after animation ends
-//   heart.addEventListener('animationend', () => {
-//     heart.remove();
-//   });
 });
 
 const loveBar = document.createElement('div');
