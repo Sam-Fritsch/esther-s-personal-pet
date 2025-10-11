@@ -101,7 +101,7 @@ margin: 0;
   max-width: 400px;        
   max-height: 400px; 
   background: #fff;
-  border: 4px solid #000; /* pixel-y black border */
+  border: 4px solid #000; 
   font-family: "Pixelify Sans", sans-serif;
   font-size: 12px; /* adjust to taste */
   color: #000;
