@@ -2,7 +2,7 @@ const pet = document.querySelector('.pet');
 const wrapper = document.querySelector('.pet-wrapper');
 
 let url = 'https://api.sheety.co/503cd683d77f4feeb101a928a19c01b6/messageBank/sheet1';
-let dailyMessage = "Personal Panda thinks that Esther has a beautiful soul... and a beautiful big face. I want to squeeze it"; // Default fallback
+let dailyMessage = "I saw a happy spider house/halloween decoration while walking to the train on Friday, and laughed outloud. It made me realize, you've helped me appreciate the small things in life, I sometimes tease you for being a baby but really you see the world with wonder, and being around you has allowed me to view the world as a fun place, and appreciate things as they are. It is a happy way to live life."; // Default fallback
 
 async function loadDailyMessage() {
   try {
@@ -16,7 +16,7 @@ async function loadDailyMessage() {
       return msgDate.toDateString() === today.toDateString();
     });
     
-    dailyMessage = todaysMessageObj ? todaysMessageObj.message : "Personal Panda thinks that Esther has a beautiful soul... and a beautiful big face. I want to squeeze it";
+    dailyMessage = todaysMessageObj ? todaysMessageObj.message : "I saw a happy spider house/halloween decoration while walking to the train on Friday, and laughed outloud. It made me realize, you've helped me appreciate the small things in life, I sometimes tease you for being a baby but really you see the world with wonder, and being around you has allowed me to view the world as a fun place, and appreciate things as they are. It is a happy way to live life.";
     return dailyMessage;
   } catch (error) {
     console.error("Error fetching messages:", error);
