@@ -49,7 +49,7 @@ margin: 0;
 .pet {
   width: min(70vmin, 700px);  
   height: min(70vmin, 700px); 
-  background: url('./pets/jumping-penguin-sprite.png');
+  background: url('./pets/jumping-penguin-with-bandana-sprite.png');
   background-size: 400% auto; 
   animation: walk 0.5s steps(4) infinite;
   cursor: pointer;

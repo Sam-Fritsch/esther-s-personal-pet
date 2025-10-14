@@ -2,7 +2,7 @@ const pet = document.querySelector('.pet');
 const wrapper = document.querySelector('.pet-wrapper');
 
 let url = 'https://api.sheety.co/503cd683d77f4feeb101a928a19c01b6/messageBank/sheet1';
-let dailyMessage = "You are such a hard worker baby. I know you worked a lot yesterday and are doing a lot today as well. Next year has some unknowns, which can be scary. But I know that the world will reward those that are willing to work for it. Keep it going :)"; // Default fallback
+let dailyMessage = "You make me smile every day, I'm lucky to have such an amazing light of positivity in my life"; // Default fallback
 
 async function loadDailyMessage() {
   try {
@@ -16,7 +16,7 @@ async function loadDailyMessage() {
       return msgDate.toDateString() === today.toDateString();
     });
     
-    dailyMessage = todaysMessageObj ? todaysMessageObj.message : "You are such a hard worker baby. I know you worked a lot yesterday and are doing a lot today as well. Next year has some unknowns, which can be scary. But I know that the world will reward those that are willing to work for it. Keep it going :)";
+    dailyMessage = todaysMessageObj ? todaysMessageObj.message : "You make me smile every day, I'm lucky to have such an amazing light of positivity in my life";
     return dailyMessage;
   } catch (error) {
     console.error("Error fetching messages:", error);
