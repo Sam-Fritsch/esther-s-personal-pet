@@ -2,7 +2,7 @@ const pet = document.querySelector('.pet');
 const wrapper = document.querySelector('.pet-wrapper');
 
 let url = 'https://api.sheety.co/503cd683d77f4feeb101a928a19c01b6/messageBank/sheet1';
-let dailyMessage = "Glad you're spending time at the pumkin patch, enjoying the autumn experience. 4 days..."; // Default fallback
+let dailyMessage = "Glad you're spending time at the pumkin patch, enjoying the autumn experience. 4 days... Happy Halloween 👻"; // Default fallback
 
 async function loadDailyMessage() {
   try {
@@ -16,7 +16,7 @@ async function loadDailyMessage() {
       return msgDate.toDateString() === today.toDateString();
     });
     
-    dailyMessage = todaysMessageObj ? todaysMessageObj.message : "Glad you're spending time at the pumkin patch, enjoying the autumn experience. 4 days...";
+    dailyMessage = todaysMessageObj ? todaysMessageObj.message : "Glad you're spending time at the pumkin patch, enjoying the autumn experience. 4 days... Happy Halloween 👻";
     return dailyMessage;
   } catch (error) {
     console.error("Error fetching messages:", error);
