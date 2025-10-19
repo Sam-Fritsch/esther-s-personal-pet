@@ -2,7 +2,7 @@ const pet = document.querySelector('.pet');
 const wrapper = document.querySelector('.pet-wrapper');
 
 let url = 'https://api.sheety.co/503cd683d77f4feeb101a928a19c01b6/messageBank/sheet1';
-let dailyMessage = "My family is coming today. I wish you were here to explore the way we did in New York, it made me recall Broadway and everything we did together. I can't wait to start recreating memories with you next year ❤️"; // Default fallback
+let dailyMessage = "I miss you so much baby. I'm very glad to hear that you spent a day to relax and decompress. I will see you in.... 5 days!"; // Default fallback
 
 async function loadDailyMessage() {
   try {
@@ -16,7 +16,7 @@ async function loadDailyMessage() {
       return msgDate.toDateString() === today.toDateString();
     });
     
-    dailyMessage = todaysMessageObj ? todaysMessageObj.message : "My family is coming today. I wish you were here to explore the way we did in New York, it made me recall Broadway and everything we did together. I can't wait to start recreating memories with you next year ❤️";
+    dailyMessage = todaysMessageObj ? todaysMessageObj.message : "I miss you so much baby. I'm very glad to hear that you spent a day to relax and decompress. I will see you in.... 5 days!";
     return dailyMessage;
   } catch (error) {
     console.error("Error fetching messages:", error);
