@@ -2,7 +2,7 @@ const pet = document.querySelector('.pet');
 const wrapper = document.querySelector('.pet-wrapper');
 
 let url = 'https://api.sheety.co/503cd683d77f4feeb101a928a19c01b6/messageBank/sheet1';
-let dailyMessage = "Little moments matter... a job in the morning, cuddling up in a small mattress, sharing a cup of warm ramen. Fall and winter are always cold, but cozy and filled with memories like that. Even though we hate on the cold, and seasonal depression, I always look forward to the holiday season as an opportunity for those memories."; // Default fallback
+let dailyMessage = "Your the CMO of your life baby. You are strong and you have accomplished so much, more than most. And you are not finished, this is just a realignment, which everyone will experience at some point in their life. I have absolute faith that you will come out stronger and will look back and be thankful that you make that decision."; // Default fallback
 
 async function loadDailyMessage() {
   try {
@@ -16,7 +16,7 @@ async function loadDailyMessage() {
       return msgDate.toDateString() === today.toDateString();
     });
     
-    dailyMessage = todaysMessageObj ? todaysMessageObj.message :  "Little moments matter... a job in the morning, cuddling up in a small mattress, sharing a cup of warm ramen. Fall and winter are always cold, but cozy and filled with memories like that. Even though we hate on the cold, and seasonal depression, I always look forward to the holiday season as an opportunity for those memories.";
+    dailyMessage = todaysMessageObj ? todaysMessageObj.message :  "Your the CMO of your life baby. You are strong and you have accomplished so much, more than most. And you are not finished, this is just a realignment, which everyone will experience at some point in their life. I have absolute faith that you will come out stronger and will look back and be thankful that you make that decision.";
     return dailyMessage;
   } catch (error) {
     console.error("Error fetching messages:", error);
