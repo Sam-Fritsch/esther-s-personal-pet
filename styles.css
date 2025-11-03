@@ -49,9 +49,9 @@ margin: 0;
 .pet {
   width: min(70vmin, 700px);  
   height: min(70vmin, 700px); 
-  background: url('./pets/jumping-penguin-batman-sprite.png');
-  background-size: 400% auto; 
-  animation: walk 0.5s steps(4) infinite;
+  background: url('./pets/capybara-gum-sprite.png');
+  background-size: 700% auto; 
+  animation: walk 1s steps(6) infinite;
   cursor: pointer;
   image-rendering: pixelated;
   /* margin-top: 120px; */
@@ -66,7 +66,7 @@ margin: 0;
 
 @keyframes walk {
   from { background-position: 0 0; }
-  to   { background-position: -400% 0; } 
+  to   { background-position: -600% 0; } 
 }
 
 .heart {
@@ -80,7 +80,7 @@ margin: 0;
   image-rendering: pixelated;
 
   background: url('./heart-beat-sprite.png') no-repeat;
-  background-size: 200% 100%;  /* 2 frames horizontally */
+  background-size: 600% 600%;  /* 2 frames horizontally */
   animation: heartPop 0.4s steps(2) infinite; 
 }
 
@@ -94,7 +94,7 @@ margin: 0;
 
 .dialog {
   position: absolute;
-  bottom: 5%; /* above panda */
+  bottom: 5%; 
   left: 48%;
   transform: translateX(-50%);
   padding: 16px 24px;    
@@ -104,12 +104,12 @@ margin: 0;
   background: #fff;
   border: 4px solid #000; 
   font-family: "Pixelify Sans", sans-serif;
-  font-size: 12px; /* adjust to taste */
+  font-size: 12px; 
   color: #000;
   text-align: center;
   image-rendering: pixelated;
 
-  /* Optional: pixel “boxy” look */
+ 
   box-shadow: 0 0 0 2px #000 inset;
 }
 
