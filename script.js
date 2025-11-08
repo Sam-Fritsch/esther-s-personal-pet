@@ -2,7 +2,7 @@ const pet = document.querySelector('.pet');
 const wrapper = document.querySelector('.pet-wrapper');
 
 let url = 'https://api.sheety.co/503cd683d77f4feeb101a928a19c01b6/messageBank/sheet1';
-let dailyMessage = "You made it through a long week of work... Now you get to sit back. We'll spend some time together this weekend to relax, a much deserved beauty rest."; // Default fallback
+let dailyMessage = "Great workout this morning baby, I've heard that working out as a couple increases routine workouts exponentially, I would love to continue doing that together. I enjoy travelling with you, without work in the background, it feels much easier to focus on ourselves and our relationship."; // Default fallback
 
 async function loadDailyMessage() {
   try {
@@ -16,7 +16,7 @@ async function loadDailyMessage() {
       return msgDate.toDateString() === today.toDateString();
     });
     
-    dailyMessage = todaysMessageObj ? todaysMessageObj.message :  "You made it through a long week of work... Now you get to sit back. We'll spend some time together this weekend to relax, a much deserved beauty rest.";
+    dailyMessage = todaysMessageObj ? todaysMessageObj.message :  "Great workout this morning baby, I've heard that working out as a couple increases routine workouts exponentially, I would love to continue doing that together. I enjoy travelling with you, without work in the background, it feels much easier to focus on ourselves and our relationship.";
     return dailyMessage;
   } catch (error) {
     console.error("Error fetching messages:", error);
