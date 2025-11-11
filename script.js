@@ -2,7 +2,7 @@ const pet = document.querySelector('.pet');
 const wrapper = document.querySelector('.pet-wrapper');
 
 let url = 'https://api.sheety.co/503cd683d77f4feeb101a928a19c01b6/messageBank/sheet1';
-let dailyMessage = "Great workout this morning baby, I've heard that working out as a couple increases routine workouts exponentially, I would love to continue doing that together. I enjoy travelling with you, without work in the background, it feels much easier to focus on ourselves and our relationship."; // Default fallback
+let dailyMessage = "I will miss you this next week, but I'm glad you're already coming back on Wednesday next week. It will be our last week apart but we are no longer separated be necessity, and can be together when we choose. It's hard to believe that we've done long-distance for almost a year... it's insane how fast time goes. But we will be together once again, good luck this week, and look out for yourself."; // Default fallback
 
 async function loadDailyMessage() {
   try {
@@ -16,7 +16,7 @@ async function loadDailyMessage() {
       return msgDate.toDateString() === today.toDateString();
     });
     
-    dailyMessage = todaysMessageObj ? todaysMessageObj.message :  "Great workout this morning baby, I've heard that working out as a couple increases routine workouts exponentially, I would love to continue doing that together. I enjoy travelling with you, without work in the background, it feels much easier to focus on ourselves and our relationship.";
+    dailyMessage = todaysMessageObj ? todaysMessageObj.message :  "I will miss you this next week, but I'm glad you're already coming back on Wednesday next week. It will be our last week apart but we are no longer separated be necessity, and can be together when we choose. It's hard to believe that we've done long-distance for almost a year... it's insane how fast time goes. But we will be together once again, good luck this week, and look out for yourself.";
     return dailyMessage;
   } catch (error) {
     console.error("Error fetching messages:", error);
