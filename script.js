@@ -2,7 +2,7 @@ const pet = document.querySelector('.pet');
 const wrapper = document.querySelector('.pet-wrapper');
 
 let url = 'https://api.sheety.co/503cd683d77f4feeb101a928a19c01b6/messageBank/sheet1';
-let dailyMessage = "You made it through the week! Good job making it to Friday Eve... You worked very hard this week and deserve a good birthday weekend. I hope that you are able to rest... recovery is important and even time spent at home, in the gym, watching movies can be helpful. If you go to Saigon nights, try not to stay out to late, you have a lot of travel upcoming."; // Default fallback
+let dailyMessage = "Sometimes I think about you, or watch a funny video/photo of you, and I smile or laugh like an idiot :) You are very cute."; // Default fallback
 
 async function loadDailyMessage() {
   try {
@@ -16,7 +16,7 @@ async function loadDailyMessage() {
       return msgDate.toDateString() === today.toDateString();
     });
     
-    dailyMessage = todaysMessageObj ? todaysMessageObj.message :  "You made it through the week! Good job making it to Friday Eve... You worked very hard this week and deserve a good birthday weekend. I hope that you are able to rest... recovery is important and even time spent at home, in the gym, watching movies can be helpful. If you go to Saigon nights, try not to stay out to late, you have a lot of travel upcoming.";
+    dailyMessage = todaysMessageObj ? todaysMessageObj.message :  "Sometimes I think about you, or watch a funny video/photo of you, and I smile or laugh like an idiot :) You are very cute.";
     return dailyMessage;
   } catch (error) {
     console.error("Error fetching messages:", error);
