@@ -2,7 +2,7 @@ const pet = document.querySelector('.pet');
 const wrapper = document.querySelector('.pet-wrapper');
 
 let url = 'https://api.sheety.co/503cd683d77f4feeb101a928a19c01b6/messageBank/sheet1';
-let dailyMessage = "Somebody luvs ya - I had a dream I was with you and your brother's fam, at lynhurst park and Booboo could speak English."; // Default fallback
+let dailyMessage = "I'm in the minority that I love winter, and when people say its 'cuffing season', they mean they love the coziness that comes with winter and the holidays together. I can't wait for a full winter and holiday together again."; // Default fallback
 
 async function loadDailyMessage() {
   try {
@@ -16,7 +16,7 @@ async function loadDailyMessage() {
       return msgDate.toDateString() === today.toDateString();
     });
     
-    dailyMessage = todaysMessageObj ? todaysMessageObj.message :  "Somebody luvs ya - I had a dream I was with you and your brother's fam, at lynhurst park and Booboo could speak English.";
+    dailyMessage = todaysMessageObj ? todaysMessageObj.message :  "I'm in the minority that I love winter, and when people say its 'cuffing season', they mean they love the coziness that comes with winter and the holidays together. I can't wait for a full winter and holiday together again.";
     return dailyMessage;
   } catch (error) {
     console.error("Error fetching messages:", error);
