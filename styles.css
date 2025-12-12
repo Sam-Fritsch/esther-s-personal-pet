@@ -49,9 +49,9 @@ margin: 0;
 .pet {
   width: min(70vmin, 700px);  
   height: min(70vmin, 700px); 
-  background: url('./pets/happy-hamster-sprite.png');
+  background: url('./pets/happy-thug-santa-panda-sprite.png');
   background-size: 400% auto; 
-  animation: walk 0.5s steps(4) infinite;
+  animation: walk 1s steps(4) infinite;
   cursor: pointer;
   image-rendering: pixelated;
   margin-top: 120px;
