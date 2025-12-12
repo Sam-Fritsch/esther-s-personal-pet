@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Esther's Personal Pet</title>
+<link rel="manifest" href="manifest.json">
+<link rel="stylesheet" href="styles.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&family=Rubik:ital,wght@0,300..900;1,300..900&family=Viaoda+Libre&display=swap" rel="stylesheet">
+</head>
+<body>
+<div class="scale-wrapper">
+  <div class="container">
+    <h1>Esther's Personal Pet</h1>
+    <h2>Add a Nice Message!</h2>
+    <input></input>
+    <button class="save-button">Save</button>  
+  </div>
+</div>
+<script>
+    document.getElementById('open').onclick = async () => {
+    [fileHandle] = await window.showOpenFilePicker({
+        types: [{
+            description: 'JSON file',
+            accept: {'application/json': ['.json']}
+        }]
+    });
+
+    const file = await fileHandle.getFile();
+    const text = await file.text();
+    const json = JSON.parse(text);
+
+    document.getElementById('msg').value = json.dailyMessage;
+};
+
+
+
+</script>
+</body>
+</html>

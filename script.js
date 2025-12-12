@@ -4,19 +4,16 @@ const wrapper = document.querySelector('.pet-wrapper');
 let url = 'https://api.sheety.co/503cd683d77f4feeb101a928a19c01b6/messageBank/sheet1';
 let dailyMessage = ""; // Default fallback
 
-async function loadDailyMessage() {
-  try {
-    const response = await fetch('./message.json');
-    const data = await response.json();
-    dailyMessage = data.dailyMessage;
-    console.log("Loaded message:", dailyMessage);
-    return dailyMessage;
-  } catch (e) {
-    console.error(e);
-    dailyMessage = "Can't load message 😢";
-    return dailyMessage;
-  }
+async function loadMessage() {
+    try {
+        const res = await fetch('/api/message'); 
+        const data = await res.json();
+        document.getElementById('msg').textContent = data.dailyMessage;
+    } catch (err) {
+        console.error("Failed to load message:", err);
+    }
 }
+
 
 loadDailyMessage();
 
