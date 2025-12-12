@@ -5,7 +5,7 @@ let url = 'https://api.sheety.co/503cd683d77f4feeb101a928a19c01b6/messageBank/sh
 let dailyMessage = ""; // Default fallback
 
 async function loadDailyMessage() {
-    dailyMessage = "It will!";
+    dailyMessage = "It will change again!!";
     return dailyMessage;
 
 }
