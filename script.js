@@ -2,26 +2,12 @@ const pet = document.querySelector('.pet');
 const wrapper = document.querySelector('.pet-wrapper');
 
 let url = 'https://api.sheety.co/503cd683d77f4feeb101a928a19c01b6/messageBank/sheet1';
-let dailyMessage = "Welcome to Minneapolis. Thug Panda missed you ❤️. Happy holidays to a lovely girl 🎄"; // Default fallback
+let dailyMessage = ""; // Default fallback
 
 async function loadDailyMessage() {
-  try {
-    const response = await fetch(url);
-    const json = await response.json();
-    const messages = json.sheet1;
-    const today = new Date();
-
-    const todaysMessageObj = messages.find(msg => {
-      const msgDate = new Date(msg.date);
-      return msgDate.toDateString() === today.toDateString();
-    });
-    
-    dailyMessage = todaysMessageObj ? todaysMessageObj.message :  "Welcome to Minneapolis. Thug Panda missed you ❤️. Happy holidays to a lovely girl 🎄";
+    dailyMessage = "It will!";
     return dailyMessage;
-  } catch (error) {
-    console.error("Error fetching messages:", error);
-    return dailyMessage; // Return fallback
-  }
+
 }
 
 loadDailyMessage();
