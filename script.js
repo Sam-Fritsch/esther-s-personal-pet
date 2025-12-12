@@ -4,7 +4,7 @@ const wrapper = document.querySelector('.pet-wrapper');
 let url = 'https://api.sheety.co/503cd683d77f4feeb101a928a19c01b6/messageBank/sheet1';
 let dailyMessage = ""; // Default fallback
 
-async function loadMessage() {
+async function loadDailyMessage() {
     try {
         const res = await fetch('/api/message'); 
         const data = await res.json();
