@@ -5,9 +5,17 @@ let url = 'https://api.sheety.co/503cd683d77f4feeb101a928a19c01b6/messageBank/sh
 let dailyMessage = ""; // Default fallback
 
 async function loadDailyMessage() {
-    dailyMessage = "It will change again!!";
+  try {
+    const response = await fetch('./message.json');
+    const data = await response.json();
+    dailyMessage = data.dailyMessage;
+    console.log("Loaded message:", dailyMessage);
     return dailyMessage;
-
+  } catch (e) {
+    console.error(e);
+    dailyMessage = "Can't load message 😢";
+    return dailyMessage;
+  }
 }
 
 loadDailyMessage();
