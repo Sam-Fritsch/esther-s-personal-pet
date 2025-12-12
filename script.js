@@ -93,7 +93,7 @@ document.addEventListener('DOMContentLoaded', () => {
       if (!message) return alert("Enter a message");
 
       try {
-        await fetch('/api/set_message', {
+        await fetch('/api/put_message', {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify({ dailyMessage: message })
