@@ -12,7 +12,7 @@ export default async function handler(req, res) {
 
   try {
     const response = await fetch(
-      `https://api.github.com/repos/${REPO}/contents/message.json`,
+      `https://api.github.com/repos/${REPO}/data/message.json`,
       { headers: { Authorization: `token ${TOKEN}` } }
     );
     

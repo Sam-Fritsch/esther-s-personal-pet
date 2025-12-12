@@ -16,7 +16,7 @@ export default async function handler(req, res) {
   try {
     // Get current file SHA
     const getRes = await fetch(
-      `https://api.github.com/repos/${REPO}/contents/message.json`,
+      `https://api.github.com/repos/${REPO}/data/message.json`,
       { headers: { Authorization: `token ${TOKEN}` } }
     );
     const { sha } = await getRes.json();
@@ -25,7 +25,7 @@ export default async function handler(req, res) {
     const content = Buffer.from(JSON.stringify({ dailyMessage }, null, 2)).toString('base64');
     
     await fetch(
-      `https://api.github.com/repos/${REPO}/contents/message.json`,
+      `https://api.github.com/repos/${REPO}/data/message.json`,
       {
         method: 'PUT',
         headers: {
