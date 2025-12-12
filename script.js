@@ -77,3 +77,39 @@ loveBar.style.height = '128px';
 loveBar.style.backgroundSize = 'cover';
 loveBar.style.cursor = 'pointer';
 
+
+
+
+// Below is functions specific to the editor.html file:
+
+
+const saveButton = document.getElementById('saveMessageButton');
+const messageInput = document.getElementById('messageInput');
+
+
+if (saveButton && messageInput) {
+  saveButton.addEventListener('click', async () => {
+    const message = messageInput.value.trim();
+
+    if (!message) {
+      alert("Please enter a message");
+      return;
+    }
+
+    try {
+      await fetch('/api/put_message', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({ dailyMessage: message })
+      });
+
+      alert("Message saved 💖");
+      messageInput.value = "";
+    } catch (err) {
+      console.error("Save failed:", err);
+      alert("Failed to save message");
+    }
+  });
+}

@@ -14,28 +14,10 @@
   <div class="container">
     <h1>Esther's Personal Pet</h1>
     <h2>Add a Nice Message!</h2>
-    <input></input>
-    <button class="save-button">Save</button>  
+    <input id="messageInput" type="text"/>
+    <button class="save-button" id="saveMessageButton">Save</button>  
   </div>
 </div>
-<script>
-    document.getElementById('open').onclick = async () => {
-    [fileHandle] = await window.showOpenFilePicker({
-        types: [{
-            description: 'JSON file',
-            accept: {'application/json': ['.json']}
-        }]
-    });
-
-    const file = await fileHandle.getFile();
-    const text = await file.text();
-    const json = JSON.parse(text);
-
-    document.getElementById('msg').value = json.dailyMessage;
-};
-
-
-
-</script>
+<script src="script.js"></script>
 </body>
 </html>
