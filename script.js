@@ -6,7 +6,7 @@ let dailyMessage = ""; // Default fallback
 
 async function loadDailyMessage() {
     try {
-        const res = await fetch('/api/message'); 
+        const res = await fetch('/api/fetch_message'); 
         const data = await res.json();
         dailyMessage = data.dailyMessage;
     } catch (err) {
