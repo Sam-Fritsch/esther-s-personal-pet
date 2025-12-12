@@ -5,13 +5,9 @@ const wrapper = document.querySelector('.pet-wrapper');
 let dailyMessage = ""; // Default fallback
 
 async function loadDailyMessage() {
-    try {
-        const res = await fetch('/api/fetch_message'); 
-        const data = await res.json();
-        dailyMessage = data.dailyMessage;
-    } catch (err) {
-        console.error("Failed to load message:", err);
-    }
+  const response = await fetch('https://esther-s-personal-panda.vercel.app/api/get_message');
+  const data = await response.json();
+  return data.dailyMessage;
 }
 
 

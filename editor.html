@@ -18,32 +18,34 @@
     <button class="save-button" id="saveMessageButton">Save</button>  
   </div>
 </div>
+
 <script>
-document.addEventListener('DOMContentLoaded', () => {
-  const saveButton = document.getElementById('saveMessageButton');
-  const messageInput = document.getElementById('messageInput');
+async function saveMessage(message) {
+  await fetch('https://esther-s-personal-panda.vercel.app/api/put_message', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ dailyMessage: message })
+  });
+}
 
-  if (saveButton && messageInput) {
-    saveButton.addEventListener('click', async () => {
-      const message = messageInput.value.trim();
-      if (!message) return alert("Enter a message");
-
-      try {
-        await fetch('/api/put_message', {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({ dailyMessage: message })
-        });
-
-        alert("Saved ❤️");
-        messageInput.value = "";
-      } catch (err) {
-        console.error(err);
-      }
-    });
+// Add this event listener
+document.getElementById('saveMessageButton').addEventListener('click', async () => {
+  const message = document.getElementById('messageInput').value;
+  
+  if (!message) {
+    alert('Please enter a message!');
+    return;
+  }
+  
+  try {
+    await saveMessage(message);
+    alert('Message saved successfully!');
+    document.getElementById('messageInput').value = ''; // Clear input
+  } catch (error) {
+    console.error('Error saving message:', error);
+    alert('Failed to save message. Please try again.');
   }
 });
-
 </script>
 </body>
 </html>
