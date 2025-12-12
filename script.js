@@ -79,31 +79,3 @@ loveBar.style.cursor = 'pointer';
 
 
 
-
-// Below is functions specific to the editor.html file:
-
-
-document.addEventListener('DOMContentLoaded', () => {
-  const saveButton = document.getElementById('saveMessageButton');
-  const messageInput = document.getElementById('messageInput');
-
-  if (saveButton && messageInput) {
-    saveButton.addEventListener('click', async () => {
-      const message = messageInput.value.trim();
-      if (!message) return alert("Enter a message");
-
-      try {
-        await fetch('/api/put_message', {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({ dailyMessage: message })
-        });
-
-        alert("Saved ❤️");
-        messageInput.value = "";
-      } catch (err) {
-        console.error(err);
-      }
-    });
-  }
-});

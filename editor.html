@@ -18,6 +18,32 @@
     <button class="save-button" id="saveMessageButton">Save</button>  
   </div>
 </div>
-<script src="script.js"></script>
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  const saveButton = document.getElementById('saveMessageButton');
+  const messageInput = document.getElementById('messageInput');
+
+  if (saveButton && messageInput) {
+    saveButton.addEventListener('click', async () => {
+      const message = messageInput.value.trim();
+      if (!message) return alert("Enter a message");
+
+      try {
+        await fetch('/api/put_message', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ dailyMessage: message })
+        });
+
+        alert("Saved ❤️");
+        messageInput.value = "";
+      } catch (err) {
+        console.error(err);
+      }
+    });
+  }
+});
+
+</script>
 </body>
 </html>
