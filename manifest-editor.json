@@ -1,0 +1,22 @@
+{
+  "name": "Esther's Personal Pet",
+  "short_name": "EPP",
+  "start_url": "/editor.html",
+  "scope": "/",
+  "display": "standalone",
+  "background_color": "#fce4ec",
+  "theme_color": "#fce4ec",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "icon-152.png",
+      "type": "image/png",
+      "sizes": "152x152"
+    },
+    {
+      "src": "icon-180.png",
+      "type": "image/png",
+      "sizes": "180x180"
+    }
+  ]
+}
