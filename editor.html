@@ -57,19 +57,22 @@ async function loadTracker() {
     const data = await response.json();
     trackerValue = data.trackerValue; 
     console.log('Loaded message:', trackerValue);
+
+    if (trackerValue == true) {
+        formArea = document.querySelector('.message-request');
+        formArea.innerHTML = `<h3>Request message</h3>`;
+    }
+
+
   } catch (error) {
     console.error('Failed to load message:', error);
     trackerValue = "Something went wrong!";
   }
+
+
 }
 
 loadTracker();
-console.log(trackerValue);
-if (trackerValue) {
-    formArea = box.querySelector('.message-request');
-    formArea.innerHTML = `<h3>Request message</h3>`;
-    return;
-}
 
 </script>
 </body>
