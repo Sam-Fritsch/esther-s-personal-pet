@@ -21,6 +21,15 @@
 </div>
 
 <script>
+
+async function updateTracker() {
+  await fetch('https://esther-s-personal-panda.vercel.app/api/put_tracker', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ trackerValue: false })
+  });
+}
+
 async function saveMessage(message) {
   await fetch('https://esther-s-personal-panda.vercel.app/api/put_message', {
     method: 'POST',
@@ -40,6 +49,7 @@ document.getElementById('saveMessageButton').addEventListener('click', async () 
   
   try {
     await saveMessage(message);
+    await updateTracker();
     alert('Message saved successfully!');
     document.getElementById('messageInput').value = ''; // Clear input
   } catch (error) {
