@@ -16,6 +16,7 @@
     <h2>Add a Nice Message!</h2>
     <input id="messageInput" type="text"/>
     <button class="save-button" id="saveMessageButton">Save</button>  
+    <h3 class="message-request"></h3>
   </div>
 </div>
 
@@ -46,6 +47,30 @@ document.getElementById('saveMessageButton').addEventListener('click', async () 
     alert('Failed to save message. Please try again.');
   }
 });
+
+
+let trackerValue = ""; 
+
+async function loadTracker() {
+  try {
+    const response = await fetch('https://esther-s-personal-panda.vercel.app/api/get_tracker');
+    const data = await response.json();
+    trackerValue = data.trackerValue; 
+    console.log('Loaded message:', trackerValue);
+  } catch (error) {
+    console.error('Failed to load message:', error);
+    trackerValue = "Something went wrong!";
+  }
+}
+
+loadTracker();
+console.log(trackerValue);
+if (trackerValue) {
+    formArea = box.querySelector('.message-request');
+    formArea.innerHTML = `<h3>Request message</h3>`;
+    return;
+}
+
 </script>
 </body>
 </html>
