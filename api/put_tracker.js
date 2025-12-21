@@ -1,4 +1,3 @@
-// api/put_message.js
 export default async function handler(req, res) {
   res.setHeader('Access-Control-Allow-Origin', '*');
   res.setHeader('Access-Control-Allow-Methods', 'POST,OPTIONS');
@@ -8,7 +7,11 @@ export default async function handler(req, res) {
   if (req.method !== 'POST') return res.status(405).json({ error: 'POST only' });
 
   const { trackerValue } = req.body;
-  if (!trackerValue) return res.status(400).json({ error: 'Missing trackerValue' });
+
+  if (typeof trackerValue !== 'boolean') {
+  return res.status(400).json({ error: 'trackerValue must be boolean' });
+  }
+
 
   const TOKEN = process.env.GITHUB_TOKEN;
   const REPO = process.env.GITHUB_REPO; // e.g., "username/repo-name"

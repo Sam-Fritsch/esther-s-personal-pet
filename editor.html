@@ -48,8 +48,8 @@ document.getElementById('saveMessageButton').addEventListener('click', async () 
   }
   
   try {
-    await saveMessage(message);
     await updateTracker();
+    await saveMessage(message);
     alert('Message saved successfully!');
     document.getElementById('messageInput').value = ''; // Clear input
   } catch (error) {
