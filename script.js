@@ -30,6 +30,25 @@ loadDailyMessage();
 
 // fetchMessages();
 
+async function requestMessage() {
+  await fetch('https://esther-s-personal-panda.vercel.app/api/put_tracker', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ trackerValue: true })
+  });
+}
+
+document.querySelector('.request-button').addEventListener('click', async () => {
+  try {
+    await requestMessage();
+    alert('Message requested!');
+  } catch (e) {
+    alert('Failed to request message');
+  }
+});
+
+
+
 
 pet.addEventListener('click', () => {
   const existingHeart = wrapper.querySelector('.heart');
