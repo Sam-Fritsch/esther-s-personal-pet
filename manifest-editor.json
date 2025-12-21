@@ -9,12 +9,12 @@
   "orientation": "portrait-primary",
   "icons": [
     {
-      "src": "icon-152.png",
+      "src": "icons/editor-icon-152.png",
       "type": "image/png",
       "sizes": "152x152"
     },
     {
-      "src": "icon-180.png",
+      "src": "icons/editor-icon-180.png",
       "type": "image/png",
       "sizes": "180x180"
     }
