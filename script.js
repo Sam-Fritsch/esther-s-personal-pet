@@ -18,6 +18,22 @@ async function loadDailyMessage() {
 
 loadDailyMessage();
 
+let trackerValue = ""; 
+
+async function loadTracker() {
+  try {
+    const response = await fetch('https://esther-s-personal-panda.vercel.app/api/get_tracker');
+    const data = await response.json();
+    trackerValue = data.trackerValue; // ← Actually assign it!
+    console.log('Loaded message:', trackerValue);
+  } catch (error) {
+    console.error('Failed to load message:', error);
+    trackerValue = "Something went wrong!";
+  }
+}
+
+loadTracker();
+
 // async function fetchMessages() {
 //   try {
 //     const response = await fetch('/api/getMessages');
