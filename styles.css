@@ -79,7 +79,7 @@ color: #C2185B
 .pet {
   width: min(70vmin, 700px);  
   height: min(70vmin, 700px); 
-  background: url('./pets/happy-hedgehog-sprite.png');
+  background: url('./pets/happy-frog-sprite.png');
   background-size: 400% auto; 
   animation: walk 1s steps(4) infinite;
   cursor: pointer;
@@ -125,7 +125,7 @@ color: #C2185B
 
 .dialog {
   position: absolute;
-  bottom: 5%; /* above panda */
+  bottom: -30%; /* above panda */
   left: 48%;
   transform: translateX(-50%);
   padding: 16px 24px;    
